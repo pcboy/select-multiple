@@ -84,6 +84,10 @@
           attributes = "",
           $option = $(option);
 
+      if (typeof that.options.escapeHTML === 'function') {
+        that.escapeHTML = that.options.escapeHTML;
+      }
+
       for (var cpt = 0; cpt < option.attributes.length; cpt++){
         var attr = option.attributes[cpt];
 
